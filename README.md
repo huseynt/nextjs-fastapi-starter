@@ -48,9 +48,9 @@ npx create-next-app nextjs-fastapi --example "https://github.com/digitros/nextjs
 First, create and activate a virtual environment:
 
 ```bash
-.\venv\Scripts\Activate
 python3 -m venv venv
 source venv/bin/activate
+.\venv\Scripts\Activate
 ```
 
 Then, install the dependencies:
