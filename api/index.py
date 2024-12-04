@@ -7,11 +7,16 @@ import numpy as np
 from PIL import Image, UnidentifiedImageError
 import requests
 from io import BytesIO
-
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(docs_url="/api/py/docs", openapi_url="/api/py/openapi.json")
-
-
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Bütün domenlərə icazə ver. Təhlükəsizlik üçün dəyişdirə bilərsiniz.
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Model dosya yolu ve yüklenmesi
 model_path = os.path.abspath(r"E:\nextjs-fastapi-starter-main\model_fire.keras")
