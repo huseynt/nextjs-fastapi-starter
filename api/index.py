@@ -82,11 +82,11 @@ def predict_fire(image_data: ImageURL):
         raise HTTPException(status_code=500, detail=f"Tahmin ilemi srasnda hata olutu: {e}")
 
 # Ana sayfa
-@app.get("/")
-def read_root():
-    return {"message": "Fire and Non-Fire snflandrma API'si calisiyor!"}
+# @app.get("/")
+# def read_root():
+#     return {"message": "Fire and Non-Fire snflandrma API'si calisiyor!"}
 
 
-@app.get("/api/py/helloFastApi")
+@app.get("/api/py/hello")
 def read_root():
     return {"message": "Fire and Non-Fire siniflandirma API'si calisiyor!"}
