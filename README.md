@@ -57,6 +57,7 @@ Then, install the dependencies:
 
 ```bash
 npm install
+npm install --save three
 # or
 yarn
 # or
